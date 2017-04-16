@@ -1,0 +1,72 @@
+<html>
+<head>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/admin.js"></script>
+<style>
+body{
+	font-family: sans-serif;
+}
+#categories{
+	font-size:18px;
+	widht: 100px;
+	height: 30px;
+}
+input{
+	font-size: 18px;
+    display: inline-block;
+    margin-top: 10px;
+    width: auto;
+}
+input[type='button']{
+	background: #0971B2;
+	color: white;
+	
+}
+#newCategorySection{
+	border: 1px solid;
+}
+#categoryRelated{
+	
+	border: 1px solid black;
+	
+}
+#categoryRelated select{
+	font-size:18px;
+	width: 300px;
+}
+#categoryRelated input, select{
+	display:block;
+}
+#categorySelected{
+	font-weight: bold;
+	margin-top: 10px;
+	font-size:18px;
+	margin-bottom: 10px;
+}
+</style> 
+<title>Admin</title>
+</head>
+<body>
+
+	Select Existing Category: <select id="categories">
+
+	</select>
+	<div id="newCategorySection">
+		New category: <input type="text" id="newCategory"/> 
+		<input type="button" id="createNewCategory" value="Create New Category" />
+	</div>
+	<div id="categoryRelated">
+		Current Selected: <span id="categorySelected"></span>
+		<br/>
+		Other Names:
+		<select id="categoryList" size="10">
+		</select>  
+		<input type="button" id="selectNext" value="Next" />
+		<input type="button" id="selectPrevious" value="Previous" />
+		<hr/>
+		<input type="text" id="newEntry"/> 
+		<input type="button" id="createNewEntry" value="Create New Entry" />
+		<input type="button" id="deleteEntry" value="Delete Selected Entry" />
+	</div>
+</body>
+</html>
